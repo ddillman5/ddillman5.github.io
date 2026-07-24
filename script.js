@@ -7,10 +7,10 @@ const addBtn = document.getElementById("addBtn");
 const themeBtn = document.getElementById("themeBtn");
 const cityList = document.getElementById("cityList");
 
-// Add an event listener to addCity when the 'Add City' button is clicked
+// Call addCity when the 'Add City' button is clicked
 addBtn.addEventListener("click", addCity);
 
-// Add an event listener to change the theme when the theme button is clicked
+// Call toggleTheme when the theme button is clicked
 themeBtn.addEventListener("click", toggleTheme);
 
 // Add a city to the cities array.
@@ -66,7 +66,7 @@ function displayCities() {
         // Create a new Date object
         const now = new Date();
 
-        // Convert Date object to a time string
+        // Format Date object to a time string
         const time = now.toLocaleTimeString("en-US", {
             timeZone: city.timeZone,
             hour: "numeric",
@@ -74,7 +74,7 @@ function displayCities() {
             second: "2-digit"
         });
 
-        // Convert Date object to a date string
+        // Format Date object to a date string
         const date = now.toLocaleDateString("en-US", {
             timeZone: city.timeZone,
             weekday: "long",
@@ -105,11 +105,13 @@ function displayCities() {
         cityList.appendChild(cityCard);
     });
 
-    // Add click events to all Remove buttons
+    // Get all remove buttons currently on the webpage
     const removeButtons = document.querySelectorAll(".remove-btn");
 
+    // For each remove button found on the webpage, add a click listener
     removeButtons.forEach(function (button) {
         button.addEventListener("click", function () {
+            // When the remove button is clicked, we get index and call removeCity
             const index = Number(button.dataset.index);
 
             removeCity(index);
@@ -127,13 +129,16 @@ function removeCity(index) {
     displayCities();
 }
 
-// Switch between light mode and dark mode
+// Switch between light mode and dark mode when theme button is clicked
 function toggleTheme() {
 
+    // Adds the 'dark' class if it isn't already there
     document.body.classList.toggle("dark");
 
+    // If dark mode is active, show the option to switch to light mode
     if (document.body.classList.contains("dark")) {
         themeBtn.textContent = "Light Mode";
+    // Otherwise, show the option to switch to dark mode
     } else {
         themeBtn.textContent = "Dark Mode";
     }

@@ -34,7 +34,7 @@ h1 {
 
 }
 
-/* Dropdown and buttons */
+/* Layout styling for dropdown and buttons */
 .controls {
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +67,6 @@ button:hover {
 
 /* Styling for each city card */
 .city {
-    position: relative;
 
     margin-bottom: 15px;
     padding: 20px;
@@ -108,7 +107,7 @@ body.dark {
     color: white;
 }
 
-/* Main background coloring */
+/* Dark mode for main container  */
 body.dark .container {
     background-color: #333333;
     border-color: #555555;
