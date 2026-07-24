@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Title of webpage -->
+    <title>Global Time App</title>
+
+    <!-- Link our style.css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- This section will hold our entire webpage -->
+    <main class="container">
+
+        <!-- Header for website -->
+        <h1>Global Time App</h1>
+
+        <!-- This section holds the controls for the webpage -->
+        <div class="controls">
+
+            <!-- Dropdown box -->
+            <select id="citySelect">
+                <option value="America/Los_Angeles">Los Angeles</option>
+
+                <option value="America/New_York">New York</option>
+
+                <option value="America/Chicago">Chicago</option>
+
+                <option value="America/Denver">Denver</option>
+
+                <option value="Europe/London">London</option>
+
+                <option value="Europe/Paris">Paris</option>
+
+                <option value="Asia/Tokyo">Tokyo</option>
+
+                <option value="Australia/Sydney">Sydney</option>
+            </select>
+
+            <!-- Add city button -->
+            <button id="addBtn">Add City</button>
+
+            <!-- Light mode / dark mode button -->
+            <button id="themeBtn">Dark Mode</button>
+
+        </div>
+
+        <hr>  <!-- Horizontal line -->
+
+        <!-- Section to hold our saved cities -->
+        <div id="cityList">
+            <!-- City cards will be added here with JavaScript -->
+        </div>
+
+    </main>
+
+    <!-- Link our script.js file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Light mode default page styling */
+body {
+    margin: 0;
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+    color: #222222;
+}
+
+/* Main content area */
+.container {
+
+    width: 90%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+}
+
+/* Page title styling */
+h1 {
+    margin-top: 0;
+
+}
+
+/* Dropdown and buttons */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+/* Apply styling to select and button elements */
+select, button {
+    padding: 10px 14px;
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+
+    border: 1px solid #999999;
+    border-radius: 5px;
+}
+
+/* Add styling to buttons */
+button {
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+
+/* Apply darker background color when button is hovered over */
+button:hover {
+    background-color: #dddddd;
+}
+
+/* Styling for each city card */
+.city {
+    position: relative;
+
+    margin-bottom: 15px;
+    padding: 20px;
+
+    border: 1px solid #aaaaaa;
+    border-radius: 6px;
+}
+
+/* Styling for headers of city cards */
+.city h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+/* Styling of time displayed in city cards */
+.city-time {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Styling for city card dates */
+.city-date {
+    margin: 0 0 15px;
+
+    color: #666666;
+}
+
+/* Styling for remove button in city cards */
+.remove-btn {
+    padding: 7px 12px;
+}
+
+/* Dark mode styling */
+body.dark {
+    background-color: #222222;
+    color: white;
+}
+
+/* Main background coloring */
+body.dark .container {
+    background-color: #333333;
+    border-color: #555555;
+}
+
+/* Dark mode styling for city cards */
+body.dark .city {
+    border-color: #777777;
+}
+
+/* Dark mode styling for city card date displays */
+body.dark .city-date {
+    color: #cccccc;
+}
+
+/* Dark mode styling for select dropdown and buttons */
+body.dark select,
+body.dark button {
+    background-color: #444444;
+    color: white;
+    border-color: #777777;
+}
+
+/* Dark mode darker color for hovering over button */
+body.dark button:hover {
+    background-color: #555555;
+}
